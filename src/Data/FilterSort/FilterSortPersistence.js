@@ -1,6 +1,6 @@
 var FilterSortPersistence = (function() {
   function _getStorageKey() {
-    return "TodoList_FilterSort";
+    return "DC_FilterSort";
   }
 
   function getSavedState() {
