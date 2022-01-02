@@ -47648,8 +47648,6 @@ var _utils = require('flux/utils');
 
 var _uuid = require('uuid');
 
-var _uuid2 = _interopRequireDefault(_uuid);
-
 var _RecordActionTypes = require('./RecordActionTypes');
 
 var _RecordActionTypes2 = _interopRequireDefault(_RecordActionTypes);
@@ -47701,7 +47699,7 @@ var RecordStore = function (_ReduceStore) {
           }
           var dateCreated = +new Date();
           var modifiedState = [].concat(_toConsumableArray(state), [new _Record2.default({
-            id: (0, _uuid2.default)(),
+            id: (0, _uuid.v1)(),
             text: action.text,
             dateCreated: dateCreated,
             dateModified: dateCreated

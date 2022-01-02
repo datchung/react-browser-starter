@@ -1,5 +1,5 @@
 import { ReduceStore } from 'flux/utils';
-import uuid from 'uuid';
+import { v1 as uuidv1 } from 'uuid';
 import RecordActionTypes from './RecordActionTypes';
 import Dispatcher from '../Dispatcher';
 import Record from './Record';
@@ -25,7 +25,7 @@ class RecordStore extends ReduceStore {
         var modifiedState = [
           ...state, 
           new Record({
-            id: uuid(),
+            id: uuidv1(),
             text: action.text,
             dateCreated: dateCreated,
             dateModified: dateCreated
